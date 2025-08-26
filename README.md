@@ -4,7 +4,11 @@ A Minecraft-inspired educational web game that combines learning with adventure!
 
 ## 🎥 Demo Video
 
-Watch MindCraft in action: [YouTube Demo](https://youtu.be/O640HMGhcRY)
+Watch MindCraft in action:
+
+[![MindCraft Demo](https://img.youtube.com/vi/O640HMGhcRY/0.jpg)](https://youtu.be/O640HMGhcRY)
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/O640HMGhcRY" title="MindCraft Educational Game Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## 🎮 Game Features
 
