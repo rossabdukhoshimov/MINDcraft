@@ -2,6 +2,10 @@
 
 A Minecraft-inspired educational web game that combines learning with adventure! Players explore different worlds while solving math and reading challenges to progress through levels and unlock new areas.
 
+## 🎥 Demo Video
+
+Watch MindCraft in action: [YouTube Demo](https://youtu.be/O640HMGhcRY)
+
 ## 🎮 Game Features
 
 ### **Educational Gameplay Loop**
@@ -72,14 +76,43 @@ mindcraft/
 - Python (v3.8 or higher)
 - pip (Python package manager)
 
-### Automated Setup
+### 🚀 One-Click Start (Recommended)
 
-1. **Run the setup script:**
+The easiest way to run MindCraft is using the automated start script:
+
+1. **Make the script executable (first time only):**
    ```bash
-   ./setup.sh
+   chmod +x start.sh
    ```
 
-### Manual Setup
+2. **Run the start script:**
+   ```bash
+   ./start.sh
+   ```
+
+The `start.sh` script will:
+- ✅ Check for required dependencies (Python 3 and Node.js)
+- 🧹 Clean up any existing processes on ports 3000, 5000, 5001
+- 🔧 Automatically find available ports if default ones are busy
+- 🐍 Set up Python virtual environment and install dependencies
+- 📦 Install Node.js dependencies for the frontend
+- 🗄️ Initialize the database with default data
+- 🌐 Start both backend and frontend servers
+- 📊 Display server URLs and admin credentials
+- 📝 Create log files for debugging
+
+**What you'll see:**
+- Frontend: `http://localhost:3000`
+- Backend API: `http://localhost:5001` (or next available port)
+- Admin login: username `admin`, password `admin123`
+
+**To stop the servers:** Press `Ctrl+C` in the terminal
+
+**Log files:**
+- Backend logs: `backend.log`
+- Frontend logs: `frontend.log`
+
+### Manual Setup (Alternative)
 
 #### Backend Setup
 
@@ -209,9 +242,65 @@ The game is fully responsive and works on:
 - **CORS Protection**: Cross-origin request security
 - **SQL Injection Prevention**: Parameterized queries
 
-## 🚀 Deployment
+## 🔧 Troubleshooting
 
-### Production Setup
+### Common Issues with start.sh
+
+**Port already in use:**
+- The script automatically finds available ports, but if you see port conflicts:
+  ```bash
+  # Check what's using the ports
+  lsof -i :3000
+  lsof -i :5001
+  
+  # Kill processes if needed
+  pkill -f "react-scripts"
+  pkill -f "python.*app.py"
+  ```
+
+**Permission denied:**
+- Make sure the script is executable:
+  ```bash
+  chmod +x start.sh
+  ```
+
+**Dependencies missing:**
+- Install Python 3: `brew install python3` (macOS) or `sudo apt install python3` (Ubuntu)
+- Install Node.js: Download from [nodejs.org](https://nodejs.org/)
+
+**Virtual environment issues:**
+- If the script fails to create the virtual environment:
+  ```bash
+  cd backend
+  python3 -m venv venv
+  source venv/bin/activate
+  pip install -r requirements.txt
+  ```
+
+**Database initialization fails:**
+- Check if the backend directory has write permissions
+- Ensure SQLite is available on your system
+
+**Frontend won't start:**
+- Clear node_modules and reinstall:
+  ```bash
+  cd frontend
+  rm -rf node_modules package-lock.json
+  npm install
+  ```
+
+### Log Analysis
+
+If the servers don't start properly, check the log files:
+```bash
+# View backend logs
+cat backend.log
+
+# View frontend logs  
+cat frontend.log
+```
+
+## 🚀 Deployment
 1. Set environment variables for production
 2. Use a production database (PostgreSQL/MySQL)
 3. Configure HTTPS certificates
