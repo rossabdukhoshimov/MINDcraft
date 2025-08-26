@@ -1,0 +1,427 @@
+.profile-container {
+  padding: 20px 0;
+}
+
+.profile-header {
+  text-align: center;
+  margin-bottom: 40px;
+  animation: fadeIn 0.6s ease-out;
+}
+
+.profile-header h1 {
+  color: white;
+  font-size: 36px;
+  margin-bottom: 10px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.profile-header p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 18px;
+  margin: 0;
+}
+
+.profile-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 40px;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.profile-card {
+  background: white;
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.6s ease-out;
+  text-align: center;
+  position: relative;
+}
+
+.profile-card h3 {
+  text-align: center !important;
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: 600;
+  width: 100%;
+  display: block;
+  position: relative;
+  z-index: 10;
+}
+
+.profile-card h3 {
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/* Removed Account Information and Game Statistics styles */
+
+/* Current Stage */
+.current-stage {
+  text-align: center;
+}
+
+.stage-display {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-radius: 12px;
+}
+
+.stage-emoji {
+  font-size: 48px;
+  margin-right: 20px;
+}
+
+.stage-details h4 {
+  color: #333;
+  font-size: 20px;
+  margin-bottom: 8px;
+  text-align: left;
+}
+
+.stage-theme {
+  color: #666;
+  margin: 5px 0;
+  text-align: left;
+  font-weight: 600;
+}
+
+.stage-description {
+  color: #666;
+  font-size: 14px;
+  font-style: italic;
+  text-align: left;
+  margin: 5px 0 0 0;
+}
+
+/* Inventory */
+.inventory-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 15px;
+  justify-items: center;
+}
+
+.inventory-item {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  padding: 15px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: transform 0.3s ease;
+}
+
+.inventory-item:hover {
+  transform: translateY(-2px);
+}
+
+.item-icon {
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.item-name {
+  font-weight: 600;
+  color: #333;
+  text-transform: capitalize;
+  flex: 1;
+}
+
+.item-quantity {
+  color: #667eea;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.no-items {
+  color: #666;
+  font-style: italic;
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* Unlocked Stages */
+.stages-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.stage-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%);
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+  text-align: center;
+}
+
+.stage-item:hover {
+  transform: translateY(-2px);
+}
+
+.stage-item .stage-emoji {
+  font-size: 32px;
+  margin-bottom: 8px;
+}
+
+.stage-item .stage-info {
+  text-align: center;
+  background: none;
+  padding: 0;
+  margin: 0;
+}
+
+.stage-item .stage-name {
+  font-weight: 600;
+  color: #155724;
+  margin-bottom: 8px;
+  font-size: 16px;
+  display: block;
+  line-height: 1.2;
+}
+
+.stage-item .stage-theme {
+  color: #0f5132;
+  font-size: 12px;
+  margin: 0;
+  display: block;
+  line-height: 1.2;
+}
+
+/* Achievements */
+.achievements-list {
+  max-height: 200px;
+  overflow-y: auto;
+  text-align: center;
+}
+
+.achievement-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.achievement-item:last-child {
+  border-bottom: none;
+}
+
+.achievement-icon {
+  font-size: 20px;
+  margin-right: 12px;
+}
+
+.achievement-text {
+  color: #333;
+  font-weight: 500;
+}
+
+.no-achievements {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.no-achievements p {
+  color: #666;
+  margin-bottom: 15px;
+  font-style: italic;
+}
+
+/* Recent Activity */
+.activity-list {
+  max-height: 200px;
+  overflow-y: auto;
+  text-align: center;
+}
+
+.activity-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 0;
+}
+
+.activity-icon {
+  font-size: 24px;
+  margin-right: 16px;
+}
+
+.activity-content {
+  flex: 1;
+}
+
+.activity-title {
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 4px;
+}
+
+.activity-time {
+  font-size: 14px;
+  color: #666;
+}
+
+/* Profile Actions */
+.profile-actions {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+/* Error and Loading States */
+.error-message {
+  background: #f8d7da;
+  color: #721c24;
+  padding: 16px;
+  border-radius: 8px;
+  text-align: center;
+  margin: 20px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .profile-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .stats-row { grid-template-columns: repeat(2, minmax(220px, 1fr)); }
+}
+
+@media (max-width: 768px) {
+  .profile-header h1 {
+    font-size: 28px;
+  }
+  
+  .profile-header p {
+    font-size: 16px;
+  }
+  
+  .stats-layout { grid-template-columns: 1fr; }
+  .stats-row { grid-template-columns: 1fr; gap: 12px; }
+  
+  .stat-card {
+    padding: 15px 10px;
+  }
+  
+  .stat-number {
+    font-size: 28px;
+  }
+  
+  .stage-display {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .stage-emoji {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+  
+  .stage-details h4, .stage-theme, .stage-description {
+    text-align: center;
+  }
+  
+  .profile-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .inventory-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .inventory-item {
+    padding: 12px;
+    gap: 8px;
+  }
+  
+  .item-icon {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-container {
+    padding: 10px 0;
+  }
+  
+  .profile-card {
+    padding: 16px;
+  }
+  
+  .stats-grid {
+    flex-direction: column;
+  }
+  
+  .stat-item {
+    padding: 12px;
+  }
+  
+  .info-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+  
+  .stage-item {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .stage-item .stage-emoji {
+    margin-right: 0;
+    margin-bottom: 8px;
+  }
+  
+  .stage-item .stage-info {
+    text-align: center;
+  }
+  
+  .stage-item .stage-name, .stage-item .stage-theme {
+    text-align: center;
+  }
+  
+  .inventory-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .inventory-item {
+    padding: 10px;
+    gap: 6px;
+  }
+  
+  .item-icon {
+    font-size: 16px;
+  }
+  
+  .stats-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .stats-row { grid-template-columns: 1fr; gap: 12px; }
+  
+  .stat-card {
+    padding: 12px 8px;
+  }
+  
+  .stat-number {
+    font-size: 24px;
+  }
+  
+  .progress-section {
+    padding: 15px;
+  }
+}
